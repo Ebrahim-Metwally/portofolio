@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    background-color:gold;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 90%;
+margin: auto;
+padding: 20px 0;
+
+}
+
+nav .logo{
+    color: #000;
+    text-decoration: none;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    margin:0;
+    padding:0px;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+nav ul li a:hover{
+    color:red;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+}
+.content .text{
+    color: #000;
+    width: 45%;
+
+}
+.content .text h2{
+text-transform: uppercase;
+font-size: 40px;
+font-weight: 700;
+letter-spacing: 2px;
+
+}
+
+.content .text p{
+ font-size: 18px;
+ line-height: 25px;
+ margin: 10px;
+ letter-spacing: 1px ;
+}
+
+.content .image{
+    width:50%;
+}
+
+.content .image img{
+width: 450px;
+}
+
+@media (min-width:950px) and (max-width:1150px){
+    .content .image img{
+        width: 330px;
+    }
+}
+
+@media(max-width:950px){
+ .content,nav{
+    flex-direction: column;
+    justify-content: center;
+ }
+.content .image, .content.text{
+    width: 100%;
+}
+
+}
+
+/* تنسيق الحاوية اللي شايلا الجدول عشان يجي في النص */
+.table-container {
+    width: 75%;
+    margin: 50px auto; /* بيوسن الجدول في نص الصفحة ويبعده عن الـ Nav */
+}
+
+/* التنسيق الرئيسي للجدول */
+table {
+    width: 100%;
+    border-collapse: collapse; /* بيشيل الفراغات البايخة بين الخلايا */
+    background-color: #fff; /* خلفية بيضاء تكسر اللون الأصفر */
+    border-radius: 15px;
+    overflow: hidden; /* عشان الحواف المدورة تظهر */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* ظل خفيف يدي فخامة */
+}
+
+/* تنسيق عناوين الجدول */
+table th {
+    background-color: #000; /* هيدر أسود فخم */
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* تنسيق خلايا البيانات */
+table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #eee; /* خط خفيف جداً بين الصفوف */
+    font-size: 16px;
+    color: #333;
+}
+
+/* حركة لما تمشي بالماوس على الصف */
+table tbody tr:hover {
+    background-color: hsl(0, 3%, 68%);
+    transition: 0.3s;
+}
+
+/* تنسيق عنوان الجدول (Most Popular Courses) */
+caption {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+form{
+    background-color: hsl(0, 0%, 100%);
+    width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius:15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+form input{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 15px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+form input:focus{
+    border-color: gold;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+form button{
+    background-color: #000;
+    color: #eee;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+main{
+    text-align: center;
+}
+
+
+/* الحاوية الكبيرة */
+.contact-container {
+    display: flex;
+    justify-content: space-between; /* بيخلي فيه مسافة بين العمودين */
+    width: 85%;
+    margin: 40px auto;
+    gap: 30px;
+}
+
+/* تنسيق عمود الفورم */
+.contact-form {
+    flex: 2; /* بياخد مساحة أكبر شوية من معلومات التواصل */
+}
+
+/* تنسيق عمود المعلومات */
+.contact-info {
+    flex: 1;
+    background-color: #000; /* خلفية سوداء فخمة */
+    color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* تنسيق مربعات المعلومات الصغيرة */
+.info-box {
+    margin-bottom: 25px;
+}
+
+.info-box h3 {
+    color: gold; /* عناوين باللون الذهبي */
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+/* تعديل بسيط للفورم عشان يفرش في مساحته الجديدة */
+.contact-form form {
+    width: 100%; /* عشان ياخد عرض الـ div اللي هو فيه */
+    margin: 0; /* شيلنا الـ auto عشان هو خلاص واخد مكانه في الـ flex */
+}
+
+/* تنسيق الـ Textarea */
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    height: 120px; /* طول مناسب لكتابة رسالة */
+    resize: none; /* عشان المستخدم ميغيرش حجمها ويبوظ التنسيق */
+}
